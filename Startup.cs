@@ -31,6 +31,7 @@ namespace pipelines_dotnet_core
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMvc(option => option.EnableEndpointRouting = false);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
